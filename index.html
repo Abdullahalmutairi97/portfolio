@@ -441,18 +441,18 @@
   <section id="work">
     <div class="section-header">
       <span>Selected work</span>
-      <span>03</span>
+      <span>05</span>
     </div>
 
     <div class="work-grid">
       <!-- Project Selector List -->
       <div class="project-list" id="projectList">
-        <!-- Item 01: Archon Desktop -->
+        <!-- Item 01: ArchonUI -->
         <div class="project-item" data-index="0">
           <span class="project-num">01</span>
           <div>
-            <div class="project-title">Archon Desktop</div>
-            <div class="project-tagline">Linux workspace for coding agents</div>
+            <div class="project-title">ArchonUI</div>
+            <div class="project-tagline">Tiled workspace for coding-agent CLIs</div>
           </div>
           <span class="project-arrow">→</span>
         </div>
@@ -473,6 +473,26 @@
           <div>
             <div class="project-title">Medar</div>
             <div class="project-tagline">Bilingual medical study workspace</div>
+          </div>
+          <span class="project-arrow">→</span>
+        </div>
+
+        <!-- Item 04: Penguin Notes -->
+        <div class="project-item" data-index="3">
+          <span class="project-num">04</span>
+          <div>
+            <div class="project-title">Penguin Notes</div>
+            <div class="project-tagline">Notes with a local AI assistant</div>
+          </div>
+          <span class="project-arrow">→</span>
+        </div>
+
+        <!-- Item 05: Penguin Viewer -->
+        <div class="project-item" data-index="4">
+          <span class="project-num">05</span>
+          <div>
+            <div class="project-title">Penguin Viewer</div>
+            <div class="project-tagline">Fast image and video viewer</div>
           </div>
           <span class="project-arrow">→</span>
         </div>
@@ -519,11 +539,11 @@
   const projects = [
     {
       num: "01",
-      title: "Archon Desktop",
-      tagline: "Linux workspace for coding agents",
-      image: "uploads/images-1790912139667-epi8.png",
-      tech: "Electron · React · FastAPI · Python · 2026",
-      desc: "Linux desktop environment built for AI coding agents (Prime, Pi, Codex). Includes full IDE, terminal dock, persistent sessions, diff viewer, and local runtime orchestration."
+      title: "ArchonUI",
+      tagline: "Tiled workspace for coding-agent CLIs",
+      image: "uploads/archonui.png",
+      tech: "Rust · GPUI · 2026",
+      desc: "A tiled desktop workspace for coding-agent CLIs — Claude Code, Codex, Gemini CLI and OpenCode side by side in one window, with an editor, file browser, git panel, terminal and diff viewer. Written in Rust on GPUI, the framework behind Zed, with a v0.2 beta out now."
     },
     {
       num: "02",
@@ -540,6 +560,22 @@
       image: "uploads/medar-anatomy-v2.png",
       tech: "Vinext · Cloudflare Workers · D1 · R2 · 2026",
       desc: "Open-source bilingual medical study platform, built for free to help medical students. Features an interactive 3D anatomy atlas, lecture slides, bilingual audio/recordings, note taking, quizzes, and an AI study assistant. Runs on Vinext and Cloudflare Workers."
+    },
+    {
+      num: "04",
+      title: "Penguin Notes",
+      tagline: "Notes with a local AI assistant",
+      image: "uploads/penguin-notes.png",
+      tech: "Rust · egui · Ollama · 2026",
+      desc: "Markdown notes with a local AI sidebar, on-device voice input and two-way sync with the iPhone Calendar and Notes apps. Models run through Ollama or LM Studio, so nothing leaves the machine, and speech is transcribed locally. Ships for Windows and Linux."
+    },
+    {
+      num: "05",
+      title: "Penguin Viewer",
+      tagline: "Fast image and video viewer",
+      image: "uploads/penguin-viewer.png",
+      tech: "Rust · egui · ffmpeg · 2026",
+      desc: "A small, fast viewer that opens almost any image — JPEG, PNG, WebP, GIF, AVIF, SVG, TIFF — and plays video with sound. ffmpeg is compiled into the binary, so there is nothing else to install. One download for Windows and Linux."
     }
   ];
 
