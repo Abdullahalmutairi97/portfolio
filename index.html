@@ -582,6 +582,7 @@
   // Warm the cache for every project image so switching is instant
   window.addEventListener("load", () => {
     projects.forEach(p => { const i = new Image(); i.src = p.image; });
+    const cv = new Image(); cv.src = "cv-preview.webp";
   });
 
   // Project selector interaction
