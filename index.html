@@ -501,7 +501,7 @@
       <!-- Project Detail Card -->
       <div class="project-detail" id="projectDetail">
         <div class="project-image-container">
-          <img id="detailImg" src="uploads/images-1790912911986-hmsy.png" alt="Project preview" class="project-image">
+          <img id="detailImg" src="uploads/images-1790912911986-hmsy.webp" alt="Project preview" class="project-image">
         </div>
         <div class="project-meta-bar">
           <span id="detailTech" class="project-tech">Next.js · Gemini · Supabase · 2026</span>
@@ -526,7 +526,7 @@
       <button id="closeCvBtn" class="modal-close">CLOSE ✕</button>
     </div>
     <div class="modal-body">
-      <img src="cv-preview.png" alt="Curriculum Vitae" class="cv-img">
+      <img src="cv-preview.webp" loading="lazy" alt="Curriculum Vitae" class="cv-img">
       <div class="cv-download-bar">
         <a href="Abdullah_Almutairi_CV.pdf" download="Abdullah_Almutairi_CV.pdf" class="btn-download">Download PDF ↓</a>
       </div>
@@ -541,7 +541,7 @@
       num: "01",
       title: "ArchonUI",
       tagline: "Tiled workspace for coding-agent CLIs",
-      image: "uploads/archonui.png",
+      image: "uploads/archonui.webp",
       tech: "Rust · GPUI · 2026",
       desc: "A tiled desktop workspace for coding-agent CLIs — Claude Code, Codex, Gemini CLI and OpenCode side by side in one window, with an editor, file browser, git panel, terminal and diff viewer. Written in Rust on GPUI, the framework behind Zed, with a v0.2 beta out now."
     },
@@ -549,7 +549,7 @@
       num: "02",
       title: "Muhtar",
       tagline: "AI gift finder for Saudi stores",
-      image: "uploads/images-1790912911986-hmsy.png",
+      image: "uploads/images-1790912911986-hmsy.webp",
       tech: "Next.js · Gemini · Supabase · 2026",
       desc: "Describe the person and Muhtar returns four gift ideas from Amazon.sa and Noon, each from a different category. Phone sign-in and a credits system. PMU senior capstone."
     },
@@ -557,7 +557,7 @@
       num: "03",
       title: "Medar",
       tagline: "Bilingual medical study workspace",
-      image: "uploads/medar-anatomy-v2.png",
+      image: "uploads/medar-anatomy-v2.webp",
       tech: "Vinext · Cloudflare Workers · D1 · R2 · 2026",
       desc: "Open-source bilingual medical study platform, built for free to help medical students. Features an interactive 3D anatomy atlas, lecture slides, bilingual audio/recordings, note taking, quizzes, and an AI study assistant. Runs on Vinext and Cloudflare Workers."
     },
@@ -565,7 +565,7 @@
       num: "04",
       title: "Penguin Notes",
       tagline: "Notes with a local AI assistant",
-      image: "uploads/penguin-notes.png",
+      image: "uploads/penguin-notes.webp",
       tech: "Rust · egui · Ollama · 2026",
       desc: "Markdown notes with a local AI sidebar, on-device voice input and two-way sync with the iPhone Calendar and Notes apps. Models run through Ollama or LM Studio, so nothing leaves the machine, and speech is transcribed locally. Ships for Windows and Linux."
     },
@@ -573,11 +573,16 @@
       num: "05",
       title: "Penguin Viewer",
       tagline: "Fast image and video viewer",
-      image: "uploads/penguin-viewer.jpg",
+      image: "uploads/penguin-viewer.webp",
       tech: "Rust · egui · ffmpeg · 2026",
       desc: "A small, fast viewer that opens almost any image — JPEG, PNG, WebP, GIF, AVIF, SVG, TIFF — and plays video with sound. ffmpeg is compiled into the binary, so there is nothing else to install. One download for Windows and Linux."
     }
   ];
+
+  // Warm the cache for every project image so switching is instant
+  window.addEventListener("load", () => {
+    projects.forEach(p => { const i = new Image(); i.src = p.image; });
+  });
 
   // Project selector interaction
   const projectItems = document.querySelectorAll(".project-item");
